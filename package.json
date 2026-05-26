@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cloudinary": "^2.10.0",
+    "concurrently": "^9.2.1",
+    "cookie-parser": "^1.4.7",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.1.1",
+    "nodemailer": "^8.0.8"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "name": "jewellery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client": "npm run dev --prefix client",
+    "server": "npm run dev --prefix server",
+    "admin": "npm run dev --prefix admin",
+    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run admin\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
