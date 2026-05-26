@@ -1,1 +1,48 @@
 @import "tailwindcss";
+
+@theme {
+  --color-aurelia-gold: #c5a880;
+  --color-aurelia-dark: #1c1c1c;
+  --color-aurelia-light: #fbf9f4;
+  --color-tanishq-wine: #832729;
+  --color-tanishq-gold: #c5a880;
+  --color-tanishq-cream: #fbf9f4;
+  --color-tanishq-dark: #1c1c1c;
+  --font-serif: "Cinzel", "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-tanishq-cream text-tanishq-dark antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+/* Custom Utilities */
+.glass-effect {
+  @apply bg-white/10 backdrop-blur-md border border-white/20;
+}
+
+.hover-gold {
+  @apply transition-colors duration-300 hover:text-tanishq-gold;
+}
+
+.btn-gold {
+  @apply bg-tanishq-wine text-white px-8 py-3 tracking-widest text-sm uppercase transition-all duration-300 hover:bg-[#6c1e20] shadow-sm;
+}
+
+.btn-outline {
+  @apply border border-tanishq-gold text-tanishq-wine px-8 py-3 tracking-widest text-sm uppercase transition-all duration-300 hover:bg-tanishq-wine hover:text-white hover:border-tanishq-wine;
+}
+
+.input-elegant {
+  @apply w-full border-b border-gray-300 bg-transparent py-3 focus:outline-none focus:border-tanishq-wine transition-colors duration-300;
+}
+
+.luxury-card {
+  @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(131,39,41,0.08)] border border-transparent hover:border-tanishq-gold/20;
+}
